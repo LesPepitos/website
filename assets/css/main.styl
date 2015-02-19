@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700)
+@import 'nib'
+@import '_mask'
+
+global-reset()
+reset-html5()
+
+body
+  background: #F8F8FA
+
+section
+  width: 990px
+  margin: 0 auto
+  &:first-child
+    height: calc(80vh - 260px)
+  &:last-child
+    position: absolute
+    bottom: 0
+    left: 50%
+    margin-left: -445px
+
+h1
+  position: relative
+  display: block
+  width: 798px
+  height: calc(70vh - 260px)
+  margin: 0 auto
+  text-indent: -9999px
+  background: url('/images/les_pepitos.png') center no-repeat
+  span
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 90px
+    height: 90px
+    margin: -46px 0 0 246px
+    border-radius: 50%
+    overflow: hidden
+    background: #000 url('/images/mask.png') 0 90px no-repeat
+    transition: background 2s ease-in-out
+
+ul
+  margin: 10vh auto 0 auto
+  text-align: center
+  li
+    display: inline-block
+    margin: 0 30px
+    a
+      display: block
+      width: 50px
+      height: 50px
+      text-indent: -9999px
+      border-radius: 50%
+      &[href*=github]
+        background: url('/images/bt-github.png') center/contain no-repeat
+      &[href*=twitter]
+        background: url('/images/bt-twitter.png') center/contain no-repeat
+
+
+footer
+  position: absolute
+  bottom: 0
+  width: 100vw
+  padding-top: 20px
+  text-align: center
+  background: #fff
+
+blockquote
+  position: relative
+  display: inline-block
+  width: 450px
+  margin: 0
+  padding: 0 0 0 20px
+  border: none
+  font: 300 italic 19px/30px "Lato"
+  color: #626262
+  text-align: left
+  &:first-child
+    margin-right: 40px
+    &::after
+      content: ''
+      position: absolute
+      right: -20px
+      top: 0
+      bottom: 20px
+      width: 1px
+      background: #F8F8FA
+
+p
+  margin: 0 0 20px
+
+cite
+  font: 300 normal 18px/30px "Lato"
+  color: #626262
+  a
+    font-weight: 700
+    color: inherit
+    text-decoration: none
+
+cite img
+  max-width: 80px
+  max-height: 80px
+  margin-right: 5px
+  border-radius: 50%
+  vertical-align: middle
