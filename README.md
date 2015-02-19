@@ -2,5 +2,17 @@
 
 ## Dependencies
 
-* Nodejs 0.10
+* Nodejs 0.12
 
+
+## Start
+```
+npm install
+npm install -g gulp
+gulp
+```
+
+## Deploy
+```
+shipit staging deploy
+```

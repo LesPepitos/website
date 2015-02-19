@@ -1,0 +1,13 @@
+server {
+  listen        80;
+  server_name   lespepitos.dev;
+  root          YOUR_HOME/www/lespepitos/dist;
+
+  location / {
+    try_files $uri/index.html $uri $uri.html @notfound;
+  }
+
+  location @notfound {
+    return 404;
+  }
+}

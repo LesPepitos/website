@@ -28,6 +28,8 @@
     "nib": "^1.1.0",
     "pretty-hrtime": "^1.0.0",
     "require-dir": "^0.1.0",
+    "shipit-cli": "^1.1.0",
+    "shipit-deploy": "^1.1.1",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "~1.0.2"
   }
