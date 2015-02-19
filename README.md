@@ -14,5 +14,5 @@ gulp
 
 ## Deploy
 ```
-shipit staging deploy
+shipit staging start
 ```
