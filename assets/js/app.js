@@ -1,17 +1,34 @@
 window.onload = function() {
-  var timerMask = window.setTimeout(showMask, 2000);
+  var random = getRandomArbitrary(1, 16);
+  showMask(random);
+  switchFavicon(random);
 
-  function showMask() {
-    var random = getRandomArbitrary(1, 16),
-        span = document.querySelector('h1 span'),
-        duration = 0.125 * random + 's',
-        position = -90 * random + 'px';
+  function showMask(num) {
+    var span = document.querySelector('h1 span'),
+        duration = 0.125 * (num - 1) + 's',
+        position = -90 * (num - 1) + 'px';
 
     span.style.transitionDuration = duration;
     span.style.backgroundPosition = '0 ' + position;
+    switchFavicon(random + 1);
   }
 
   function getRandomArbitrary(min, max) {
     return Math.round(Math.random() * (max - min) + min);
+  }
+
+  function switchFavicon(num) {
+    var link = getLink();
+    link.href = '/images/favicons/mask_' + num + '.ico';
+  }
+
+  function getLink() {
+    var link = document.getElementsByTagName('head')[0].getElementsByTagName('link');
+    for (var l = link.length, i = (l - 1); i >= 0; i--) {
+      if ((/(^|\s)icon(\s|$)/i).test(link[i].getAttribute('rel'))) {
+        return link[i];
+      }
+    }
+    return false;
   }
 }
