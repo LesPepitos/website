@@ -10,7 +10,6 @@ window.onload = function() {
 
     span.style.transitionDuration = duration;
     span.style.backgroundPosition = '0 ' + position;
-    switchFavicon(random + 1);
   }
 
   function getRandomArbitrary(min, max) {
