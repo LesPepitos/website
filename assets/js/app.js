@@ -6,7 +6,7 @@ window.onload = function() {
   function showMask(num) {
     var span = document.querySelector('h1 span'),
         duration = 0.125 * (num - 1) + 's',
-        position = -90 * (num - 1) + 'px';
+        position = -1 * getSize(span) * (num - 1) + 'px';
 
     span.style.transitionDuration = duration;
     span.style.backgroundPosition = '0 ' + position;
@@ -14,6 +14,11 @@ window.onload = function() {
 
   function getRandomArbitrary(min, max) {
     return Math.round(Math.random() * (max - min) + min);
+  }
+
+  function getSize(elt) {
+    var width = document.defaultView.getComputedStyle(elt, null).getPropertyValue("width");
+    return parseInt(width);
   }
 
   function switchFavicon(num) {

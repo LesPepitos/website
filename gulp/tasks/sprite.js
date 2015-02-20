@@ -4,10 +4,10 @@ var handleErrors = require('../util/handleErrors');
 
 
 gulp.task('sprite', function () {
-  var spriteData = gulp.src('./assets/images/mask_*.png')
+  var spriteData = gulp.src('./assets/images/masks/mask_*.png')
     .pipe(spritesmith({
-      imgName: 'mask.png',
-      cssName: '_mask.styl',
+      imgName: 'masks.png',
+      cssName: '_masks.styl',
       cssFormat: 'stylus',
       algorithm: 'top-down',
       cssTemplate: './gulp/templates/mask.css.mustache',
