@@ -1,4 +1,7 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px)
+  $mask-size = 150px
+  $avatar-size = 60px
+
   section
     width: 100vw
     height: auto
@@ -14,10 +17,10 @@
     background: url('/images/les_pepitos_small.png') bottom center/contain no-repeat
     span
       top: 50px
-      width: 150px
-      height: 150px
-      margin: 0 0 0 -75px
-      background-position: 0 200px
+      width: $mask-size
+      height: $mask-size
+      margin: 0 0 0 ($mask-size/-2)
+      background-position: 0 $mask-size
 
   footer
     position: relative
@@ -38,5 +41,5 @@
   cite
     font-size: 15px
     img
-      max-width: 60px
-      max-height: 60px
+      max-width: $avatar-size
+      max-height: $avatar-size

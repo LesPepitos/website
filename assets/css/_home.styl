@@ -1,3 +1,6 @@
+$mask-size = 90px
+$avatar-size = 80px
+
 section
   width: 990px
   margin: 0 auto
@@ -22,12 +25,12 @@ h1
     position: absolute
     top: 50%
     left: 50%
-    width: 90px
-    height: 90px
+    width: $mask-size
+    height: $mask-size
     margin: -46px 0 0 246px
     border-radius: 50%
     overflow: hidden
-    background: #000 url('/images/masks.png') 0 90px/cover no-repeat
+    background: #000 url('/images/masks.png') 0 $mask-size/cover no-repeat
     transition: background 2s ease-in-out
     transition-delay: 2s
 
@@ -91,8 +94,8 @@ cite
     text-decoration: none
 
   img
-    max-width: 80px
-    max-height: 80px
+    max-width: $avatar-size
+    max-height: $avatar-size
     margin-right: 5px
     border-radius: 50%
     vertical-align: middle
